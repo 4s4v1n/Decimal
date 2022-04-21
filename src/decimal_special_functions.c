@@ -40,11 +40,11 @@ decimal decimal_truncate(decimal dec) {
   return dec;
 }
 
-decimal decimal_negate(decimal x) {
-  if (get_sign(x)) {
-    x = rm_sign(x);
+decimal decimal_negate(decimal dec) {
+  if (get_sign(dec)) {
+    dec = rm_sign(dec);
   } else {
-    x = set_sign(x);
+    dec = set_sign(dec);
   }
-  return x;
+  return dec;
 }
