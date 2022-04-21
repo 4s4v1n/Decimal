@@ -1,5 +1,5 @@
-#ifndef SRC_DECIMAL_H_
-#define SRC_DECIMAL_H_
+#ifndef DECIMAL_H
+#define DECIMAL_H
 
 #include <math.h>
 #include <stdio.h>
@@ -148,4 +148,4 @@ int incorrect_values_add(decimal x, decimal y, decimal* res);
 
 // --------------------------------------------------------------------
 
-#endif  // SRC_DECIMAL_H_
+#endif  // DECIMAL_H

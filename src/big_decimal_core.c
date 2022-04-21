@@ -155,7 +155,7 @@ big_decimal sum_big_wo_scale(big_decimal x, big_decimal y) {
   if (mind) {
     if (y.value_type != D_DOP_CODE) {
       init_big_dec(&res);
-      res.value_type = INFINITY;
+      res.value_type = D_INFINITY;
     } else {
       res.value_type = D_NORMAL_VALUE;
     }

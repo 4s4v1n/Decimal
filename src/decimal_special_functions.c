@@ -1,7 +1,7 @@
 #include "decimal.h"
 
 decimal decimal_floor(decimal dec) {
-  dec = truncate(dec);
+  dec = decimal_truncate(dec);
   if (get_sign(dec)) {
     decimal one = {{0x1, 0x0, 0x0, 0x0}, 0x0};
     one = set_sign(one);
@@ -10,7 +10,7 @@ decimal decimal_floor(decimal dec) {
   return dec;
 }
 
-decimal round(decimal dec) {
+decimal decimal_round(decimal dec) {
   decimal one = {{0x1, 0x0, 0x0, 0x0}, 0x0};
   if (get_sign(dec)) {
     one = set_sign(one);
@@ -21,7 +21,7 @@ decimal round(decimal dec) {
     dec = ten_div_mod_core(dec, &mod);
     set_scale(&dec, --scale);
   }
-  dec = truncate(dec);
+  dec = decimal_truncate(dec);
   if (mod > 5) {
     dec = decimal_add(dec, one);
   }
@@ -31,7 +31,7 @@ decimal round(decimal dec) {
   return dec;
 }
 
-decimal truncate(decimal dec) {
+decimal decimal_truncate(decimal dec) {
   int scale = get_scale(dec);
   while (scale > 0) {
     dec = ten_div(dec);
@@ -40,7 +40,7 @@ decimal truncate(decimal dec) {
   return dec;
 }
 
-decimal negate(decimal x) {
+decimal decimal_negate(decimal x) {
   if (get_sign(x)) {
     x = rm_sign(x);
   } else {
