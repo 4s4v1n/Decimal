@@ -1,6 +1,6 @@
-![10 power](/images/Visualisation_billion.png)
-
 # Decimal
+
+![10 power](./images/Visualisation_billion.png)
 
 ## В данном проекте представлена реализация типа даннах из C# decimal, на языке C , с помощью использования побитовых операций.
 

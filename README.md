@@ -1,5 +1,7 @@
 # Decimal
 
+![10 power](./images/Visualisation_billion.png)
+
 ## A project is currently proposed to implement the data type from C# decimal, in C, using bitwise operations
 
 The concept of a decimal number is implemented through a structure that stores an array of 4 elements of the `int` type and one element of the `value_type_t` type, indicating what kind of value it is.
